@@ -16,17 +16,16 @@ int termOfLoan;
     }
 
     @Override
-    public void calculateSimpleInterest() {
+    public float calculateSimpleInterest() {
          float simpleInterest = (principle*((float)interestRate/100)*termOfLoan)/100;
-         System.out.println("Simple Interest is "+simpleInterest);
-    }
+         return simpleInterest;
+        }
 
     @Override 
-    public void calculateCompoundInterest()
+    public double calculateCompoundInterest()
     {
         double compoundInterest = (double)(principle * (Math.pow((1+(double)interestRate/100),termOfLoan)))-principle;
-        System.out.println("Compound Interest is "+compoundInterest);
-        
+        return compoundInterest;        
     }
     
     @Override

@@ -18,9 +18,9 @@ class MainRunner
        
                 calculateSimpleCompound.readInput();
                 
-                calculateSimpleCompound.calculateSimpleInterest();
+               float simpleInterest= calculateSimpleCompound.calculateSimpleInterest();
                
-                calculateSimpleCompound.calculateCompoundInterest();
+                double compoundInterest=calculateSimpleCompound.calculateCompoundInterest();
                  break;
                  case 2:
                  
@@ -32,13 +32,11 @@ class MainRunner
                  int totaArea=inputReader.getTotalArea();
                  
                  EstimateHouseCost estimateHouseCost = new EstimateHouseCost(standard, totaArea);
-                 estimateHouseCost.Estimate();
+                int estimatedCost= estimateHouseCost.Estimate();
                 break;
                 case 3:
-                System.out.println("Exiting...");
                 System.exit(0);
                 default:
-                System.out.println("please enter any thing"); 
                 break;        
 
             }

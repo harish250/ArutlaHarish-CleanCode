@@ -12,7 +12,7 @@ class EstimateHouseCost implements EstimateInterface
      }
 
     @Override
-    public void Estimate() {
+    public int Estimate() {
           int totalCost=0;
 
         if(materialStandard.compareToIgnoreCase("standard")==0)
@@ -34,9 +34,7 @@ class EstimateHouseCost implements EstimateInterface
          totalCost+= 1800*totalArea;   
         
         }
-        System.out.println("The Estimated Cost is "+totalCost);
-        
-
+        return totalCost;
     }
     
 }

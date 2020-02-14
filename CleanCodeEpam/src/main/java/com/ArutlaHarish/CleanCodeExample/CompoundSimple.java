@@ -1,9 +1,9 @@
 package com.ArutlaHarish.CleanCodeExample;
 public interface CompoundSimple
 {
-     void calculateSimpleInterest();
+     float  calculateSimpleInterest();
 
-     void calculateCompoundInterest();
+     double  calculateCompoundInterest();
 
      void readInput();
 
