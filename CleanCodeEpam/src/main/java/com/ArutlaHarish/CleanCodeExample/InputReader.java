@@ -1,7 +1,8 @@
 package com.ArutlaHarish.CleanCodeExample;
 
 import java.util.Scanner;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 class InputReader
 {
   String materialStandard;
@@ -14,6 +15,8 @@ class InputReader
   
   void readInput()
   {
+	  Logger logger=LogManager.getFormatterLogger(InputReader.class);
+	  logger.info("Entered in to InputReader");
       Scanner scanner = new Scanner(System.in);
       System.out.println("Enter the  Material Standard");
       this.materialStandard=scanner.nextLine();

@@ -1,5 +1,7 @@
 package com.ArutlaHarish.CleanCodeExample;
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 class EstimateHouseCost implements EstimateInterface
 {
    
@@ -34,6 +36,8 @@ class EstimateHouseCost implements EstimateInterface
          totalCost+= 1800*totalArea;   
         
         }
+        Logger LOGGER = LogManager.getLogger(EstimateHouseCost.class);
+        LOGGER.info("Logged data");
         return totalCost;
     }
     
